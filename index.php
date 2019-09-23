@@ -24,7 +24,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 <section id="fellowship">
  <!-- Slide image  -->
       <div id="slide">
-          <img style="width:98%; height:450px; margin:1%;" src="/website/icons/inte.jpg" >
+          <img style="width:98%; height:450px; margin:1%;" src="/icons/inte.jpg" >
                                                
          <h1>Fellowship being Followed</h1>
          <p>Boost my profile and connect me to others</p>
@@ -57,7 +57,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
               <?php foreach ($catFetch2 as $commentDiff) { ?>
               <!-- fetch all the div -->
                     <div id="multipleComment">
-                        <img  src=<?php echo "/website/icons/".$commentDiff['image']; ?> >
+                        <img  src=<?php echo "/icons/".$commentDiff['image']; ?> >
                         <p><?php echo $commentDiff['message']; ?></p>
                         <h4><?php echo $commentDiff['time']; ?></h4>
                     </div>
@@ -74,7 +74,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
           <div id="folowers">
               <div id="biography">
-                  <img class='mypict' id="<?php echo "pro".$allfellow['fellow_id']; ?>" src= <?php echo "/website/icons/".$allfellow['image']; ?> >
+                  <img class='mypict' id="<?php echo "pro".$allfellow['fellow_id']; ?>" src= <?php echo "/icons/".$allfellow['image']; ?> >
                   <h3><?php echo $allfellow['fullName']; ?></h3>
                   <h3><?php echo $allfellow['email']; ?></h3>
                   <h3><?php echo $allfellow['contact']; ?></h3>
@@ -89,10 +89,10 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
               <div id="views">
                   <ul>
-                        <li><button><img class='icons' id=<?php echo "like".$allfellow['fellow_id']; ?> onclick=<?php echo "like".$allfellow['fellow_id'].'()' ?> src=  "/website/icons/like.jpg"><?php echo $allfellow['liked']; ?></button></li>
-                        <li><img class='icons' id=<?php echo "love".$allfellow['fellow_id']; ?> onclick=<?php echo "love".$allfellow['fellow_id'].'()' ?> src=  "/website/icons/love.jpg"><?php echo $allfellow['love']; ?></li>
-                        <li><img class='icons' id= <?php echo "follow".$allfellow['fellow_id']; ?>  onclick=<?php echo "follow".$allfellow['fellow_id'].'()' ?>  src=  "/website/icons/follow.jpg"><?php echo $allfellow['folowers']; ?></li>
-                        <li><img class='icons' id="comment" onclick=<?php echo "comment".$allfellow['fellow_id'].'()' ?>  src=  "/website/icons/follow.jpg"></li>
+                        <li><button><img class='icons' id=<?php echo "like".$allfellow['fellow_id']; ?> onclick=<?php echo "like".$allfellow['fellow_id'].'()' ?> src=  "/icons/like.jpg"><?php echo $allfellow['liked']; ?></button></li>
+                        <li><img class='icons' id=<?php echo "love".$allfellow['fellow_id']; ?> onclick=<?php echo "love".$allfellow['fellow_id'].'()' ?> src=  "/icons/love.jpg"><?php echo $allfellow['love']; ?></li>
+                        <li><img class='icons' id= <?php echo "follow".$allfellow['fellow_id']; ?>  onclick=<?php echo "follow".$allfellow['fellow_id'].'()' ?>  src=  "/icons/follow.jpg"><?php echo $allfellow['folowers']; ?></li>
+                        <li><img class='icons' id="comment" onclick=<?php echo "comment".$allfellow['fellow_id'].'()' ?>  src=  "/icons/follow.jpg"></li>
                   </ul>
                  
               </div>
@@ -114,13 +114,13 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
           <?php foreach ($catFetch as $allcore) { ?>
                 function  <?php echo "comment".$allcore['fellow_id'].'()' ?>{
                     document.getElementById('comt').style.display='block';
-                    document.getElementById('myUse').src = "<?php echo '/website/icons/'.$allcore['image']; ?>";
+                    document.getElementById('myUse').src = "<?php echo '/icons/'.$allcore['image']; ?>";
                     document.getElementById('myId').value = "<?php echo $allcore['fellow_id']; ?>";
                 }
 
 
                 function  <?php echo "follow".$allcore['fellow_id'].'()' ?>{
-                    document.getElementById('<?php echo "follow".$allcore["fellow_id"]; ?>').src="/website/icons/love.jpg";
+                    document.getElementById('<?php echo "follow".$allcore["fellow_id"]; ?>').src="/icons/love.jpg";
 
                 }
 
@@ -138,7 +138,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
                     // $catFetch0= mysqli_fetch_all($theRw, MYSQLI_ASSOC);
                   ?>'
                   alert("<?php echo $count; ?>");
-                    document.getElementById('<?php echo "like".$allcore["fellow_id"]; ?>').src="/website/icons/love.jpg";
+                    document.getElementById('<?php echo "like".$allcore["fellow_id"]; ?>').src="/icons/love.jpg";
                     return;
                 }
    
@@ -146,7 +146,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
 
                 function  <?php echo "love".$allcore['fellow_id'].'()' ?>{
-                    document.getElementById('<?php echo "love".$allcore["fellow_id"]; ?>').src="/website/icons/like.jpg";
+                    document.getElementById('<?php echo "love".$allcore["fellow_id"]; ?>').src="/icons/like.jpg";
                 }
 
 
