@@ -24,7 +24,7 @@ $catFetch1= mysqli_fetch_all($result1, MYSQLI_ASSOC);
                 <?php  foreach ($catFetch as $categories) {?>
                   <li>
                       <button onclick="<?php echo $categories['category']."()"; ?>"> 
-                        <img src="/website/icons/product.jpg" style="width:20px; height:20px; float:left; margin-right:10px;box-shadow:2px 1px 1px 1px rgba(187, 187, 187, 0.699); border-radius:20px">                 
+                        <img src="/icons/product.jpg" style="width:20px; height:20px; float:left; margin-right:10px;box-shadow:2px 1px 1px 1px rgba(187, 187, 187, 0.699); border-radius:20px">                 
                          <?php echo $categories['category']; ?> 
                       </button>
                       <div id="<?php echo $categories['category']; ?>" class="takle"  >
