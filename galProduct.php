@@ -10,7 +10,7 @@
                                                <img style="width:15px; height:15px; margin:3px;" src='<?php echo "/website/icons/product.jpg"; ?>' >
                                                <?php echo $galProduct1['category']."<br>".$galProduct1['categoryName'] ?>
                                             </p>
-                                            <p> 
+                                            <p>
                                                 <?php echo $galProduct1['details'] ?>
                                             </p>
                                         </div>
