@@ -15,7 +15,7 @@
 	 <header class="pageNav">
 
      	    <div class="boxes">
-	                <img class="logo" src="/website/icons/makant.jpg">
+	                <img class="logo" src="/icons/makant.jpg">
 	                 <!-- Description -->
 	                <h1 id="headerMessage">Mamady Kante</h1>
      	    </div>
