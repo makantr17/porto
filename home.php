@@ -5,7 +5,7 @@
      <section class="homeToStyle">
          <!-- Include Identity and story -->
          <div id="generalInfo">
-               <img id='myPicture' src="/website/icons/kan.jpg">
+               <img id='myPicture' src="/icons/kan.jpg">
                <div id="information">
                    <h1>Student in Africa Leadership University</h1>
                    <p>I come from a very large sensitive country Guinea where I first discover
@@ -42,7 +42,7 @@
               <h1>Where will I be expected </h1>
                 <div id="goals">
                     <div id="commonGoal">
-                       <img id="" src="/website/icons/vision.jpg">   
+                       <img id="" src="/icons/vision.jpg">   
                         <h3>Vision</h3>   
                     </div>
                     <p>My vision is to contribute to the new model design improvement and bring
@@ -51,7 +51,7 @@
 
                 <div id="goals">
                     <div id="commonGoal">                
-                        <img id="" src="/website/icons/revenue.png">  
+                        <img id="" src="/icons/revenue.png">  
                         <h3>Mission</h3> 
                     </div>
                     <p>To connect my learning programmes to the architectural design for high level reliability of technology in
@@ -60,7 +60,7 @@
 
                 <div id="goals">
                     <div id="commonGoal">
-                        <img id="" src="/website/icons/goal.png">   
+                        <img id="" src="/icons/goal.png">   
                         <h3>Goals</h3>
                     </div>
                     <p>My vision is to contribute to the new model design improvement and bring
@@ -69,7 +69,7 @@
 
                 <div id="goals">
                     <div id="commonGoal">
-                        <img id="" src="/website/icons/service.png">   
+                        <img id="" src="/icons/service.png">   
                         <h3>Services</h3>
                     </div>
                     <p>My vision is to contribute to the new model design improvement and bring
@@ -82,7 +82,7 @@
          <div id='myCareer' >
              <!-- ALl the experience I knew before -->
              <div id="experience">
-                  <img src="/website/icons/archicad.jpeg">
+                  <img src="/icons/archicad.jpeg">
                   <h2>ARCHICAD</h2><br>
                   <button onclick="fetchMore1()">Read More <i style="margin:3px; float:left; color:black" class="fa fa-caret-down"></i></button>
                   <div id="more1" >
@@ -93,7 +93,7 @@
 
 
              <div id="experience">
-                  <img src="/website/icons/artlantis.jpg">
+                  <img src="/icons/artlantis.jpg">
                   <h2>ARTLANTIS</h2><br>
                   <button onclick="fetchMore2()">Read More <i style="margin:3px; float:left; color:black" class="fa fa-caret-down"></i></button>
                   <div id="more2" >
@@ -102,7 +102,7 @@
              </div>
 
              <div id="experience">
-                  <img src="/website/icons/photoshop.jpg">
+                  <img src="/icons/photoshop.jpg">
                   <h2>PHOTOSHOP</h2><br>
                   <button onclick="fetchMore3()">Read More <i style="margin:3px; float:left; color:black" class="fa fa-caret-down"></i></button>
                   <div id="more3" >
@@ -112,7 +112,7 @@
 
 
              <div id="experience">
-                  <img src="/website/icons/progra.png">
+                  <img src="/icons/progra.png">
                   <h2>LANGUAGE java, Python, Html, css, php</h2><br>
                   <button onclick="fetchMore4()">Read More <i style="margin:3px; float:left; color:black" class="fa fa-caret-down"></i></button>
                   <div id="more4" >
@@ -121,7 +121,7 @@
              </div>
 
              <div id="experience">
-                  <img src="/website/icons/leadership.jpg">
+                  <img src="/icons/leadership.jpg">
                   <h2>LEADERSHIP CORE</h2><br>
                   <button onclick="fetchMore5()">Read More <i style="margin:3px; float:left; color:black" class="fa fa-caret-down"></i></button>
                   <div id="more5" >
