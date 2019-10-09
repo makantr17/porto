@@ -21,7 +21,7 @@ if ($comment == '' or $id == '') {
 }  else {
     $sql = "INSERT INTO `comment`(`fellow_id`, `message`, `time`) VALUES ('$id', '$comment', '$date1')"; 
     $result= mysqli_query($db, $sql); 
-    header("location: fellows.php");
+    header("location: index.php");
   
 }
 
