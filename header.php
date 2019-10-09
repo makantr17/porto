@@ -18,21 +18,37 @@
 	                <img class="logo" src="/icons/makant.jpg">
 	                 <!-- Description -->
 	                <h1 id="headerMessage">Mamady Kante</h1>
-     	    </div>
+			 </div>
+			 
+			 <i class="fa fa-bars" id="icon" onclick="displayTopnav()"></i>
                
-                	<!-- Let first create the page head -->
-     	         <div class="hedearpage">
+			<!-- Let first create the page head -->
+			<div class="hedearpage">
 
-                        <ul>
-                 		       <li><a href="home.php">Home</a></li>
+				<ul>
+						<li><a href="home.php">Home</a></li>
 
-            				    <li><a href="gallery.php">Gallery</a></li>
+						<li><a href="gallery.php">Project</a></li>
 
-								<li><a href="index.php">fellow</a></li>
+						<li><a href="index.php">fellow</a></li>
 
-    
-     	                </ul>
+						<li><a href="project.php">Gallery</a></li>
+				</ul>
 
-                </div>
+			</div>
+			
+
+			<script>
+				function displayTopnav(){
+					if (document.querySelector("div.hedearpage").style.display=="block") {
+						document.querySelector("div.hedearpage").style.display="none";
+					}else{
+                        document.querySelector("div.hedearpage").style.display="block";
+					}
+					
+				}
+                   
+			</script>
+				
 
       </header>
