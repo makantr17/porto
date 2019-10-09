@@ -1,7 +1,8 @@
 <?php
   include 'header.php';
 
-  $db = mysqli_connect("db4free.net", "mamadykante", "123456789", "portofolio");
+//   $db = mysqli_connect("localhost", "root", "", "portofolio");
+$db = mysqli_connect("db4free.net", "mamadykante", "123456789", "portofolio");
 if (mysqli_connect_errno()){
     echo 'Failed to connect to MYSQLI'. mysqli_connect_errno();
 }
@@ -10,6 +11,11 @@ if (mysqli_connect_errno()){
 $sql = "SELECT * FROM `fellow` "; 
 $result= mysqli_query($db, $sql); 
 $catFetch= mysqli_fetch_all($result, MYSQLI_ASSOC); 
+
+$sql00 = "SELECT * FROM `comment` "; 
+$result00= mysqli_query($db, $sql00); 
+$catFetch00= mysqli_fetch_all($result00, MYSQLI_ASSOC); 
+
 
 $sql2 = "SELECT `fellow`.`image`, `fellow`.`fellow_id`, `comment`.`fellow_id`, `comment`.`message`, `comment`.`time` 
 FROM `fellow`, `comment` where fellow.fellow_id = comment.fellow_id "; 
@@ -24,21 +30,42 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 <section id="fellowship">
  <!-- Slide image  -->
       <div id="slide">
-          <img style="width:98%; height:450px; margin:1%;" src="/icons/inte.jpg" >
-                                               
+          <img src="/icons/back.jpg" >                       
          <h1>Fellowship being Followed</h1>
          <p>Boost my profile and connect me to others</p>
       </div>
 
 <!-- mini menu -->
+      <div id="graber" onclick = "graberFetch()">Messagerie </div>
       <div id="Menu">
+      <?php
+       $comment = 0;
+       $liked = 0;
+       $view = 0;
+      foreach ($catFetch as $extend) {
+        //  $folowers = $extend['folowers'] + $folowers;
+         $liked = $extend['liked'] + $liked;
+         $view = $extend['view'] + $view;
+          
+      }
+      
+      foreach ($catFetch00 as $extend) {
+        $comment = 1+ $comment;
+     } ?>
+      
+      
+
+
             <ul>
-                <li>followers</li>
-                <li>liked</li>
-                <li>comments</li>
+                <li>Comment <?php echo $comment; ?></li>
+                <li>liked <?php echo $liked; ?></li>
+                <li>views <?php echo $view; ?></li>
             </ul>
 
       </div>
+     
+      <!-- Grab comments -->
+     
       <div id="dataRecords">
             <h1>All the records</h1>
             <!-- Comment box -->
@@ -50,10 +77,10 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
                     <input  id="comt" type="text" placeholder="comment" name="comment">
                     <input id="saveS" type="submit" name="save" value="S">
                 </form>
-           </div>
+            </div>
 
           <!-- After comment, user will see comment here -->
-          <div id="seeAllHere">
+            <div id="seeAllHere">
               <?php foreach ($catFetch2 as $commentDiff) { ?>
               <!-- fetch all the div -->
                     <div id="multipleComment">
@@ -64,7 +91,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
               <?php } ?>
 
-          </div>
+            </div>
 
       </div>
 
@@ -89,8 +116,8 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
               <div id="views">
                   <ul>
-                        <li><button><img class='icons' id=<?php echo "like".$allfellow['fellow_id']; ?> onclick=<?php echo "like".$allfellow['fellow_id'].'()' ?> src=  "/icons/like.jpg"><?php echo $allfellow['liked']; ?></button></li>
-                        <li><img class='icons' id=<?php echo "love".$allfellow['fellow_id']; ?> onclick=<?php echo "love".$allfellow['fellow_id'].'()' ?> src=  "/icons/love.jpg"><?php echo $allfellow['love']; ?></li>
+                        <li><img class='icons' id=<?php echo "like".$allfellow['fellow_id']; ?> onclick=<?php echo "like".$allfellow['fellow_id'].'()' ?> src="/icons/like.jpg"><?php echo $allfellow['liked']; ?></li>
+                        <li><img class='icons' id=<?php echo "view".$allfellow['fellow_id']; ?> onclick=<?php echo "view".$allfellow['fellow_id'].'()' ?> src= "/icons/view.jpg"><?php echo $allfellow['view']; ?></li>
                         <li><img class='icons' id= <?php echo "follow".$allfellow['fellow_id']; ?>  onclick=<?php echo "follow".$allfellow['fellow_id'].'()' ?>  src=  "/icons/follow.jpg"><?php echo $allfellow['folowers']; ?></li>
                         <li><img class='icons' id="comment" onclick=<?php echo "comment".$allfellow['fellow_id'].'()' ?>  src=  "/icons/follow.jpg"></li>
                   </ul>
@@ -120,7 +147,7 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
 
                 function  <?php echo "follow".$allcore['fellow_id'].'()' ?>{
-                    document.getElementById('<?php echo "follow".$allcore["fellow_id"]; ?>').src="/icons/love.jpg";
+                    document.getElementById('<?php echo "follow".$allcore["fellow_id"]; ?>').src="/icons/view.jpg";
 
                 }
 
@@ -128,39 +155,52 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
 
 
-                function  <?php echo "like".$allcore['fellow_id'].'()' ?>{
-               
-                 '<?php
-                    $count = $allcore["liked"] + 1;
-                    $id= $allcore["fellow_id"];
-                    $myInser = "UPDATE `fellow` SET `fellow`.`liked` = $count  where fellow.`fellow_id` = '$id' "; 
-                    $theRw= mysqli_query($db, $myInser); 
-                    // $catFetch0= mysqli_fetch_all($theRw, MYSQLI_ASSOC);
-                  ?>'
-                  alert("<?php echo $count; ?>");
-                    document.getElementById('<?php echo "like".$allcore["fellow_id"]; ?>').src="/icons/love.jpg";
-                    return;
-                }
    
 
 
 
-                function  <?php echo "love".$allcore['fellow_id'].'()' ?>{
-                    document.getElementById('<?php echo "love".$allcore["fellow_id"]; ?>').src="/icons/like.jpg";
+                function  <?php echo "view".$allcore['fellow_id'].'()' ?>{
+                    document.getElementById('<?php echo "view".$allcore["fellow_id"]; ?>').src="/icons/like.jpg";
                 }
 
+            <?php } ?>
 
 
 
 
-
-
-
-
-
-
+          
+            <?php foreach ($catFetch as $teste) { ?>
+                function <?php echo "like".$teste['fellow_id']."()" ?>{
+                    alert(<?php echo "like".$teste['fellow_id']; ?>);
+                       $count = 0;
+                  <?php
+                        $count = $teste["liked"] + 1;
+                        $id= $teste["fellow_id"];
+                        $myInser = "UPDATE `fellow` SET `fellow`.`liked` = $count  where fellow.`fellow_id` = '$id' "; 
+                        $theRw= mysqli_query($db, $myInser); 
+                    // $catFetch0= mysqli_fetch_all($theRw, MYSQLI_ASSOC);
+                    
+                    
+                        
+                     ?> 
+                }
+                    
+                   
+                
 
             <?php } ?>
+
+
+
+            function graberFetch() {
+                if ( document.getElementById("dataRecords").style.display == "block") {
+                    document.getElementById("dataRecords").style.display="none";
+                }
+                else{
+                    document.getElementById("dataRecords").style.display="block";
+                }
+               
+            }
 </script>
 
 
