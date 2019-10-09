@@ -10,7 +10,7 @@ $sql = "SELECT distinct (`category`) FROM `gallerycollection` ";
 $result= mysqli_query($db, $sql); 
 $catFetch= mysqli_fetch_all($result, MYSQLI_ASSOC); 
 
-$sql1 = "SELECT * FROM `gallerycollection` "; 
+$sql1 = "SELECT * FROM `gallery` "; 
 $result1= mysqli_query($db, $sql1); 
 $catFetch1= mysqli_fetch_all($result1, MYSQLI_ASSOC); 
 ?>
