@@ -1,6 +1,7 @@
 <?php
   include 'header.php';
-
+  // "localhost", "root", "", "archidb"
+// $db = mysqli_connect("localhost", "root", "", "portofolio");
 $db = mysqli_connect("db4free.net", "mamadykante", "123456789", "portofolio");
 if (mysqli_connect_errno()){
     echo 'Failed to connect to MYSQLI'. mysqli_connect_errno();
@@ -103,6 +104,9 @@ $catFetch1= mysqli_fetch_all($result1, MYSQLI_ASSOC);
       <?php } ?>
  
     </script>
+
+   
  
 </body>
+
 </html>
