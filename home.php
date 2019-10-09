@@ -22,23 +22,25 @@
                         for Impact, project, Data, and Decision took me to another stand of connecting my passion to what I am learning. 
                         I used to design and exhibit my architectural designs during the art festival of ALU, that gives me a data scall
                           of the need and interest of people to such things. 
-                        I never give up my passion but I learn how to connect them to the world of technology.</p></div>
+                        I never give up my passion but I learn how to connect them to the world of technology.
+                    </p>
+                  </div>
          </div>
 
-      <div id='furtherInfo'>
+       <div id='furtherInfo'>
          <!-- Upload interest and impact in the society -->
-         <div id="interest">
+            <div id="interest">
               <h1>Interest and Ethic Values</h1>
-                   <p>
-                   I would like to investigate my career in Computer science learning program to solve complex problems and improve human social life in society.<br>
-                   I appreciate working in the team with that occasion share ideas with friends. I manage diversity tasks of my interest which lead me to work on the architectural design that
+                  <p>
+                    I would like to investigate my career in Computer science learning program to solve complex problems and improve human social life in society.<br>
+                    I appreciate working in the team with that occasion share ideas with friends. I manage diversity tasks of my interest which lead me to work on the architectural design that
                     I was doing in my previous University KOFFI ANNAN DE GUINEE.<br>
-                   I enjoyed working on the projects and in the fact being useful and impactful to the community.<br>
-                   I value perseverance, resilience, ethics, empathy, passion, courage, teamwork, integrity, emotional intelligence, curiosity, initiative, persistence, grit, and adaptability, etc...
-                    </p>
-         </div>
+                    I enjoyed working on the projects and in the fact being useful and impactful to the community.<br>
+                    I value perseverance, resilience, ethics, empathy, passion, courage, teamwork, integrity, emotional intelligence, curiosity, initiative, persistence, grit, and adaptability, etc...
+                  </p>
+            </div>
          
-         <div id="objectif">
+           <div id="objectif">
               <h1>Where will I be expected </h1>
                 <div id="goals">
                     <div id="commonGoal">
@@ -75,7 +77,7 @@
                     <p>My vision is to contribute to the new model design improvement and bring
                          creativity to the better ecosystem friendly in the humanity</p>
                 </div>
-         </div>
+            </div>
 
 
          <div id="boxPortofolio1" onclick ="expertise()"><h1 >Diversity experience your are Looking for <i style="margin:3px; margin-right:10px; float:right; color:black" class="fa fa-caret-down"></i></h1> </div>
@@ -219,6 +221,26 @@
 
 
     </section>
+
+    <footer> 
+
+        <div id="semiMenu">
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="gallery.php">Projects</a></li>
+                <li><a href="index.php">Felow</a></li>
+                <li><a href="project.php">Gallery</a></li>
+            </ul>
+        </div>
+      
+        <div>
+           <h1>Contact</h1>
+           <p>Email: makante17@alustudent.com <br>Phone: +250787850457 <br> Adress: Kigali, Rwanda Djamirambo</p>
+        </div>
+
+        
+        
+    </footer>
 
     <script>
           function expertise(){
