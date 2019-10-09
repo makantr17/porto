@@ -1111,6 +1111,18 @@ footer div h2{
    #slide p{
     color:rgb(255, 255, 255);
    }
+     #projectShow #gallerfetch{
+       width: 100%;
+       float: left;
+       margin: 0px;
+       margin-bottom: 10px;
+   }
+   #projectShow #gallerfetch #styleImage{
+    width: 94%;
+    margin: 0px;
+    margin-left:3%;
+    margin-top: 20px;
+}
     
     }
 
