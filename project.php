@@ -26,7 +26,7 @@ $catFetch1= mysqli_fetch_all($result1, MYSQLI_ASSOC);
          <?php foreach ($catFetch1 as $keygal) {
              
         ?>
-             <img id="styleImage" src=<?php echo "/website/icons/".$keygal["images"]; ?> >
+             <img id="styleImage" src=<?php echo "/website/icons/all/".$keygal["images"]; ?> >
          <?php } ?>
         
          </div>
