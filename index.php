@@ -117,9 +117,9 @@ $catFetch2= mysqli_fetch_all($result2, MYSQLI_ASSOC);
               <div id="views">
                   <ul>
                         <li><img class='icons' id=<?php echo "like".$allfellow['fellow_id']; ?> onclick=<?php echo "like".$allfellow['fellow_id'].'()' ?> src="/icons/like.jpg"><?php echo $allfellow['liked']; ?></li>
-                        <li><img class='icons' id=<?php echo "view".$allfellow['fellow_id']; ?> onclick=<?php echo "view".$allfellow['fellow_id'].'()' ?> src= "/icons/view.jpg"><?php echo $allfellow['view']; ?></li>
-                        <li><img class='icons' id= <?php echo "follow".$allfellow['fellow_id']; ?>  onclick=<?php echo "follow".$allfellow['fellow_id'].'()' ?>  src=  "/icons/follow.jpg"><?php echo $allfellow['folowers']; ?></li>
-                        <li><img class='icons' id="comment" onclick=<?php echo "comment".$allfellow['fellow_id'].'()' ?>  src=  "/icons/follow.jpg"></li>
+                        <li><img class='icons' id=<?php echo "view".$allfellow['fellow_id']; ?> onclick=<?php echo "view".$allfellow['fellow_id'].'()' ?> src= "/icons/eye.png"><?php echo $allfellow['view']; ?></li>
+                        <li><img class='icons' id= <?php echo "follow".$allfellow['fellow_id']; ?>  onclick=<?php echo "follow".$allfellow['fellow_id'].'()' ?>  src="/icons/followers.png"><?php echo $allfellow['folowers']; ?></li>
+                        <li><img class='icons' id="comment" onclick=<?php echo "comment".$allfellow['fellow_id'].'()' ?>  src= "/icons/comment.png"></li>
                   </ul>
                  
               </div>
